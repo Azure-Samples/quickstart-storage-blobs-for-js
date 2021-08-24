@@ -1,0 +1,18 @@
+{
+  "name": "blobuserstudy",
+  "version": "1.0.0",
+  "description": "User study for Azure SDK for Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node index.js"
+  },
+  "author": "Microsoft",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1"
+  }
+}
