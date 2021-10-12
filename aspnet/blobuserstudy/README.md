@@ -1,10 +1,12 @@
-# Azure Blob Storage SDK Study
+﻿# Azure Blob Storage SDK Study
 
-Thank you for participating in critical research about the usability of the Azure SDK! This repo contains templates for an application along with instructions to run the template and tasks that will complete the application. As part of the study, the Azure SDK team is reviewing our documentation, SDK design, and user experience. We are not reviewing this study for technical skills or aptitude of our participants. You may be asked for feedback as part of the research process. Do not leave feedback or comments in this repo, as this repo is not actively developed.
+Thank you for participating in critical research about the usability of the Azure SDK! This repo contains a template for an ASP.NET application along with instructions to run the template and tasks that will complete the application. As part of the study, the Azure SDK team is reviewing our documentation, SDK design, and user experience. We are not reviewing this study for technical skills or aptitude of our participants. You may be asked for feedback as part of the research process. Do not leave feedback or comments in this repo, as this repo is not actively developed.
 
 ## Scenario
 
-Imagine you are a developer at a software company that wants to analyze log data from its mobile application. To analyze the log data, each mobile app will upload logs once a day to a central service written. This repository is the start of the code for that central service. It is an express application, and it has an endpoint started that accepts a text file. Some test text files are in the `logs` folder.
+Imagine you are a developer at a software company that wants to analyze log data from its mobile application. To analyze the log data, each mobile app will upload logs once a day to a central service written in ASP.NET. This repository is the start of the code for that central service. It is an IIS express application, and it has an endpoint started that accepts a text file. Some test text files are in the `.\logs` folder.
+
+Currently, POST and GET endpoints are prepared in the `Controllers\LogController.cs` file. Refer to [Calling the App](#calling-the-app) to get started.
 
 ### Instructions
 
@@ -15,6 +17,11 @@ Complete this application by doing two things:
 
 ## Getting Started
 
+### Prerequisites
+
+To run this scenario, you will need the ASP.NET 5 runtime installed on your local machine. You will also need an Azure Subscription with a storage account.
+
+
 ### Calling the app
 
 The app listens and responds to web requests on `localhost:3000`. For example, in PowerShell:
@@ -22,13 +29,13 @@ The app listens and responds to web requests on `localhost:3000`. For example, i
 to POST a `logs.txt` file:
 
 ```powershell
-curl http://localhost:3000 -Method POST -Body (Get-Content ".\\logs\\logs01.txt") -ContentType "text/plain"
+curl http://localhost:3000/Log -Method POST -Body (Get-Content "..\\logs\\logs01.txt")
 ```
 
 To GET
 
 ```powershell
-curl http://localhost:3000 -Method GET
+curl http://localhost:3000/Log -Method GET
 ```
 
 ## Support
