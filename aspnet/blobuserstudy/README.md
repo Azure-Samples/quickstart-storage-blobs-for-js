@@ -21,6 +21,14 @@ Complete this application by doing two things:
 
 To run this scenario, you will need the ASP.NET 5 runtime installed on your local machine. You will also need an Azure Subscription with a storage account.
 
+### Starting the app
+
+To start the app, navigate to the solution directory and run the following commands:
+
+```powershell
+dotnet restore
+dotnet run
+```
 
 ### Calling the app
 
@@ -29,13 +37,13 @@ The app listens and responds to web requests on `localhost:3000`. For example, i
 to POST a `logs.txt` file:
 
 ```powershell
-curl http://localhost:3000/Log -Method POST -Body (Get-Content "..\\logs\\logs01.txt")
+curl http://localhost:3000 -Method POST -Body (Get-Content "..\\logs\\logs01.txt")
 ```
 
 To GET
 
 ```powershell
-curl http://localhost:3000/Log -Method GET
+curl http://localhost:3000 -Method GET
 ```
 
 ## Support
