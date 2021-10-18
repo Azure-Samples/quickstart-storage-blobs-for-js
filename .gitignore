@@ -103,3 +103,8 @@ dist
 
 # TernJS port file
 .tern-port
+
+# ASP.NET data
+**/obj
+**/bin
+**/.vs
