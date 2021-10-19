@@ -22,13 +22,13 @@ The app listens and responds to web requests on `localhost:3000`. For example, i
 to POST a `logs.txt` file:
 
 ```powershell
-curl http://localhost:3000 -Method POST -Body (Get-Content ".\\logs\\logs01.txt") -ContentType "text/plain"
+curl http://localhost:3000 -Method POST -Body (Get-Content ".\\logs\\logs01.txt") -ContentType "text/plain" -UseBasicParsing
 ```
 
 To GET
 
 ```powershell
-curl http://localhost:3000 -Method GET
+curl http://localhost:3000 -Method GET -UseBasicParsing
 ```
 
 ## Support
